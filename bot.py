@@ -1,5 +1,4 @@
 import pyautogui
-import PIL
 import time
 import winsound
 from ahk import AHK
@@ -92,9 +91,6 @@ def place_monkey_tower(tower_name="None", tower_number="-1", coordinates=None, a
 
 def check_current_menu():
     """Checks where the current user is located at. Returns a dictionary containing the info."""
-    path_menu_images = "images/menu_id"
-
-    image = pyautogui.screenshot()
 
     # Trying to locate
     play_dec = pyautogui.pixelMatchesColor(838, 940, (255, 255, 255))
@@ -133,6 +129,19 @@ def check_ingame_window():
         return False
 
 
+def check_level(level):
+    """Checks if the level is visible"""
+    # level_click_locations[0]
+    match level:
+        case 0:
+            result = pyautogui.pixelMatchesColor(650, 253, (134, 196, 38))
+            print(result)
+            return result
+        case _:
+            print(False)
+            return False
+
+
 def select_level(level=0, difficulty=0, game_mode="standard"):
     """Selects the corresponding level to play, mostly hard coded."""
     menu = check_current_menu()
@@ -143,25 +152,31 @@ def select_level(level=0, difficulty=0, game_mode="standard"):
 
     match level:
         case 0:
-            click(click_locations["beginner_button_select"])
+            while not check_level(level):
+                click(click_locations["beginner_button_select"])
             click(level_click_locations[0])
         case 1:
-            click(click_locations["beginner_button_select"])
+            while not check_level(level):
+                click(click_locations["beginner_button_select"])
             click(level_click_locations[1])
         case 2:
-            click(click_locations["beginner_button_select"])
+            while not check_level(level):
+                click(click_locations["beginner_button_select"])
             click(level_click_locations[2])
         case 3:
-            click(click_locations["beginner_button_select"])
+            while not check_level(level):
+                click(click_locations["beginner_button_select"])
             click(level_click_locations[3])
         case 4:
-            click(click_locations["beginner_button_select"])
+            while not check_level(level):
+                click(click_locations["beginner_button_select"])
             click(level_click_locations[4])
         case 5:
-            click(click_locations["beginner_button_select"])
+            while not check_level(level):
+                click(click_locations["beginner_button_select"])
             click(level_click_locations[5])
         case _:
-            print("ERROR: Level is not available.")
+            print("ERROR: Level is not available.\n")
             return
 
     match difficulty:
@@ -172,9 +187,16 @@ def select_level(level=0, difficulty=0, game_mode="standard"):
         case 2:
             click(click_locations["hard_difficulty"])
         case _:
-            print(f"ERROR: Difficulty {difficulty} is unknown.")
+            print(f"ERROR: Difficulty {difficulty} is unknown.\n")
 
-    click(click_locations[game_mode])
+    game_mode_check = click_locations[game_mode]
+    if game_mode_check is None:
+        print(f"ERROR: Unknown Game Mode {game_mode}.\n")
+        return
+    else:
+        click(game_mode_check)
+
+    time.sleep(2)
 
 
 def go_select_level():
@@ -248,6 +270,7 @@ if __name__ == "__main__":
     time.sleep(5)
     small_beep()
 
-    select_level(0, 0, 0)
+    select_level(0, 0, "standard")
+    #check_level(0)
 
-    # place_monkey_tower(tower_name="None", tower_number="1", coordinates={"x": 900, "y": 400}, ahk=ahks)
+    place_monkey_tower(tower_name="None", tower_number="1", coordinates={"x": 900, "y": 400}, ahk=ahks)

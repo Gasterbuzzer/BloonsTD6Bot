@@ -1,0 +1,2 @@
+Level 0, Difficulty 1, Game Mode: Standard
+Place 702 333 15

@@ -305,7 +305,12 @@ def handle_action(action, ahk):
         upgrade_tower()
 
 
-def upgrade_tower():
+def upgrade_tower(ahk, coordinates=None):
+    """Upgrade Tower at given location."""
+
+    if coordinates is None:
+        coordinates = {"x": 0, "y": 0}
+
     print("Upgrade")
 
 

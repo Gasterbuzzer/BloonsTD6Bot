@@ -7,6 +7,13 @@ Wait 5
 Upgrade 702 333 0
 Wait 30
 Upgrade 702 333 0
+Wait 2
 Upgrade 702 333 2
 Wait 5
 Upgrade 429 705 0
+Wait 30
+Upgrade 429 705 1
+Wait 5
+Upgrade 429 705 1
+Wait 20
+Upgrade 702 333 0

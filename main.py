@@ -51,7 +51,7 @@ def handle_input(command):
         time.sleep(5)
         bot.small_beep()
 
-        bot.select_level(0, 0, "standard")
+        bot.play_level(0, 0, "standard")
 
         return response
 

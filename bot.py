@@ -262,6 +262,11 @@ def reset_cursor():
     pyautogui.moveTo(1, 1)
 
 
+def play_level(level=0, difficulty=0, game_mode="standard"):
+    """Plays a given level via already known info."""
+    select_level(level, difficulty, game_mode)
+
+
 if __name__ == "__main__":
     ahks = AHK()
 

@@ -27,3 +27,5 @@ Wait 8
 Upgrade 619 228 2
 Wait 5
 Upgrade 619 228 2
+Wait 15
+Upgrade 360 850 0

@@ -210,8 +210,7 @@ def select_level(level=0, difficulty=0, game_mode="standard"):
     click(click_locations["delete_save"])
 
     # Special Menu Button
-    if difficulty == 2:
-        click(click_locations["impoppable_accept"])
+    click(click_locations["impoppable_accept"])
 
     time.sleep(6)
 

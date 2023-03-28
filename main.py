@@ -94,6 +94,7 @@ def handle_input(command):
         # Bot playing.
         for number in range(loop_amount):
             bot.play_level(ahk, 0, 0, "standard")
+            time.sleep(10)
 
         print(f"Loop: Finished looping {loop_amount} times.\n")
 

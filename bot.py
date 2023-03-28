@@ -200,7 +200,7 @@ def select_level(level=0, difficulty=0, game_mode="standard"):
         case _:
             print(f"ERROR: Difficulty {difficulty} is unknown.\n")
 
-    game_mode_check = click_locations[game_mode]
+    game_mode_check = click_locations[game_mode.lower()]
     if game_mode_check is None:
         print(f"ERROR: Unknown Game Mode {game_mode}.\n")
         return

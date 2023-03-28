@@ -86,6 +86,7 @@ def handle_input(command):
 
         ahk = AHK()
 
+        print(f"Starting to loop {loop_amount} times. Starting in 5 seconds...\n")
         # Timer before bot start.
         time.sleep(5)
         bot.small_beep()

@@ -3,27 +3,27 @@ Place 833 366 15
 Start
 Wait 37
 Upgrade 833 366 0
-Wait 16
-Upgrade 833 366 2
-Wait 27
-Upgrade 833 366 0
-Wait 16
-Place 331 893 6
-Wait 20
-Upgrade 331 893 0
-Wait 15
-Upgrade 331 893 2
-Wait 7
-Upgrade 331 893 2
 Wait 18
+Upgrade 833 366 2
+Wait 29
 Upgrade 833 366 0
+Wait 18
+Place 340 920 7
+Wait 22
+Upgrade 331 893 0
 Wait 17
+Upgrade 331 893 2
+Wait 9
+Upgrade 331 893 2
+Wait 20
+Upgrade 833 366 0
+Wait 19
 Place 619 228 13
-Wait 5
+Wait 7
 Upgrade 619 228 1
-Wait 11
+Wait 13
 Upgrade 619 228 1
-Wait 6
+Wait 8
 Upgrade 619 228 2
-Wait 3
+Wait 5
 Upgrade 619 228 2

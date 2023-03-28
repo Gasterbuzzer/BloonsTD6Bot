@@ -299,6 +299,14 @@ def handle_action(action, ahk):
     elif action[0].lower() == "start":
         ahk.key_press("space")
         ahk.key_press("space")
+    elif action[0].lower() == "wait":
+        time.sleep(int(action[1]))
+    elif action[0].lower() == "upgrade":
+        upgrade_tower()
+
+
+def upgrade_tower():
+    print("Upgrade")
 
 
 if __name__ == "__main__":

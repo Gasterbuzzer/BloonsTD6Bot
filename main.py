@@ -1,5 +1,6 @@
 import pyautogui
 from ahk import AHK
+import bot
 
 
 # Interactive loop
@@ -42,8 +43,10 @@ def handle_input(command):
         response = False
         return response
 
-    elif command[:5] == "start":
-        print("Starting\n")
+    elif command[:5] == "level":
+        print("Starting bot...\n")
+        ahk = AHK()
+        bot.select_level(0, 0, "standard")
         return response
 
     else:
@@ -56,6 +59,7 @@ def help_print():
     print("\nAll commands: ")
     print("\t\t'h' or 'help' : Shows all commands (currently)")
     print("\t\t'q' or 'quit' : Quit the program")
+    print("\t\t'level'       : Stars playing level 0.")
 
     print("\n")
 

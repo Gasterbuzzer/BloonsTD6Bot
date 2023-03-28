@@ -17,7 +17,7 @@ monkey_towers_names_id = {"0": "dart_monkey", "1": "boomerang_monkey", "2": "bom
                           "16": "alchemist", "17": "druid", "18": "banana_farm", "19": "engineer_monkey",
                           "20": "spike_factory", "21": "monkey_village", "22": "heroes"}
 
-monkey_tower_options = {"upgrade_path_1": ",", "upgrade_path_2": ".", "upgrade_path_3": "/", "change_targeting": "tab",
+monkey_tower_options = {"upgrade_path_1": ",", "upgrade_path_2": ".", "upgrade_path_3": "-", "change_targeting": "tab",
                         "reverse_change_targeting": "ctrl + tab", "monkey_special": "PageDown"}
 
 game_options = {"sell": "Backspace", "next_round_race": "shift + space"}
@@ -340,4 +340,4 @@ if __name__ == "__main__":
     time.sleep(5)
     small_beep()
 
-    handle_action(["Start"], ahks)
+    #handle_action(["Start"], ahks)

@@ -68,6 +68,10 @@ def select_place_monkey_tower(tower_name="None", tower_number="-1", ahk=None):
         keypress = monkey_towers_names_key[monkey_towers_names_id[tower_number]]
         print(f"Pressing the key '{keypress}'.\n")
 
+        if keypress is None:
+            print("ERROR: Unknown key.\n")
+            return
+
         ahk.send_input(keypress)
         time.sleep(0.3)
 
@@ -291,7 +295,7 @@ def play_level(ahk, level=0, difficulty=0, game_mode="standard"):
 def handle_action(action, ahk):
     """Does the given action"""
     if action[0].lower() == "place":
-        place_monkey_tower(tower_number=action[3], coordinates={"x": action[1], "y": action[2]})
+        place_monkey_tower(tower_number=action[3], coordinates={"x": int(action[1]), "y": int(action[2])})
 
 
 if __name__ == "__main__":
@@ -300,7 +304,4 @@ if __name__ == "__main__":
     time.sleep(5)
     small_beep()
 
-    select_level(0, 0, "standard")
-    #check_level(0)
-
-    place_monkey_tower(tower_name="None", tower_number="1", coordinates={"x": 900, "y": 400}, ahk=ahks)
+    handle_action(["Place", "702", "333", "15"])

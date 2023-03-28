@@ -321,6 +321,7 @@ def handle_action(action, ahk):
         click(click_locations["win_screen_continue"])
         time.sleep(1)
         click(click_locations["win_screen_mainmenu"])
+        print("VICTORY: Finished a run.\n")
     else:
         print(f"ERROR: Unknown action {action}.\n")
 

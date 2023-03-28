@@ -295,7 +295,7 @@ def play_level(ahk, level=0, difficulty=0, game_mode="standard"):
 def handle_action(action, ahk):
     """Does the given action"""
     if action[0].lower() == "place":
-        place_monkey_tower(tower_number=action[3], coordinates={"x": int(action[1]), "y": int(action[2])})
+        place_monkey_tower(tower_number=action[3], coordinates={"x": int(action[1]), "y": int(action[2])}, ahk=ahk)
 
 
 if __name__ == "__main__":
@@ -304,4 +304,4 @@ if __name__ == "__main__":
     time.sleep(5)
     small_beep()
 
-    handle_action(["Place", "702", "333", "15"])
+    handle_action(["Place", "702", "333", "15"], ahks)

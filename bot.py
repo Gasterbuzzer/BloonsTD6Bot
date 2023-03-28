@@ -142,6 +142,9 @@ def check_level(level):
         case 0:
             result = pyautogui.pixelMatchesColor(650, 253, (134, 196, 38))
             return result
+        case 12:
+            result = pyautogui.pixelMatchesColor(1340, 558, (255, 255, 255))
+            return result
         case _:
             return False
 
@@ -176,6 +179,10 @@ def select_level(level=0, difficulty=0, game_mode="standard"):
                 click(click_locations["beginner_button_select"])
             click(level_click_locations[4])
         case 5:
+            while not check_level(level):
+                click(click_locations["beginner_button_select"])
+            click(level_click_locations[5])
+        case 12:
             while not check_level(level):
                 click(click_locations["beginner_button_select"])
             click(level_click_locations[5])

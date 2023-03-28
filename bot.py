@@ -135,10 +135,8 @@ def check_level(level):
     match level:
         case 0:
             result = pyautogui.pixelMatchesColor(650, 253, (134, 196, 38))
-            print(result)
             return result
         case _:
-            print(False)
             return False
 
 
@@ -174,7 +172,7 @@ def select_level(level=0, difficulty=0, game_mode="standard"):
         case 5:
             while not check_level(level):
                 click(click_locations["beginner_button_select"])
-            click(level_click_locations[5])
+            click(level_click_locatwions[5])
         case _:
             print("ERROR: Level is not available.\n")
             return

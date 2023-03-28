@@ -302,7 +302,7 @@ def handle_action(action, ahk):
     elif action[0].lower() == "wait":
         time.sleep(int(action[1]))
     elif action[0].lower() == "upgrade":
-        upgrade_tower()
+        upgrade_tower(ahk)
 
 
 def upgrade_tower(ahk, coordinates=None):

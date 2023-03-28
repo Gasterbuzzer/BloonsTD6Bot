@@ -264,7 +264,7 @@ def reset_cursor():
 
 def play_level(ahk, level=0, difficulty=0, game_mode="standard"):
     """Plays a given level via already known info."""
-    #select_level(level, difficulty, game_mode)
+    select_level(level, difficulty, game_mode)
 
     level_location = "levels/"
     level_file_name = str(level) + str(difficulty) + game_mode + ".txt"
@@ -284,14 +284,14 @@ def play_level(ahk, level=0, difficulty=0, game_mode="standard"):
 
     # Work through the list:
     while action_list:
-        handle_action(action_list[0])
+        handle_action(action_list[0], ahk)
         del action_list[0]
 
 
 def handle_action(action, ahk):
     """Does the given action"""
     if action[0].lower() == "place":
-        place_monkey_tower()
+        place_monkey_tower(tower_number=action[3], coordinates={"x": action[1], "y": action[2]})
 
 
 if __name__ == "__main__":

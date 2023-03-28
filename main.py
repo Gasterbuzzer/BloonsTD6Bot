@@ -47,10 +47,24 @@ def handle_input(command):
     elif command[:5] == "level":
         print("Starting bot...\n")
 
+        # Getting arguments
+        args = command.split()
+
+        if len(args) != 4:
+            print("ERROR: Incorrect format. See 'help' for usage.")
+            return response
+
+        level = int(args[1])
+        difficulty = int(args[2])
+        gamemode = args[3]
+
         ahk = AHK()
+
+        # Timer before bot start.
         time.sleep(5)
         bot.small_beep()
 
+        # Bot playing.
         bot.play_level(ahk, 0, 0, "standard")
 
         return response
@@ -63,9 +77,9 @@ def handle_input(command):
 def help_print():
     """Prints all commands to console"""
     print("\nAll commands: ")
-    print("\t\t'h' or 'help' : Shows all commands (currently)")
-    print("\t\t'q' or 'quit' : Quit the program")
-    print("\t\t'level'       : Starts playing level 0.")
+    print("\t\t'h' or 'help'                                : Shows all commands (currently)")
+    print("\t\t'q' or 'quit'                                : Quit the program")
+    print("\t\t'level %level% %difficulty %gamemode%'       : Starts playing level 0. (Example: 'level 0 0 standard')")
 
     print("\n")
 

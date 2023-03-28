@@ -3,7 +3,7 @@ Place 833 366 15
 Start
 Wait 37
 Upgrade 833 366 0
-Wait 13
+Wait 16
 Upgrade 833 366 2
 Wait 27
 Upgrade 833 366 0

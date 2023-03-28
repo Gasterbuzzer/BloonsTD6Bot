@@ -262,7 +262,7 @@ def reset_cursor():
     pyautogui.moveTo(1, 1)
 
 
-def play_level(level=0, difficulty=0, game_mode="standard"):
+def play_level(ahk, level=0, difficulty=0, game_mode="standard"):
     """Plays a given level via already known info."""
     #select_level(level, difficulty, game_mode)
 
@@ -278,7 +278,20 @@ def play_level(level=0, difficulty=0, game_mode="standard"):
 
         while line := f.readline():
             # We go through each line and add it to our list
-            action_list.append(line.rstrip())
+            action_list.append(line.rstrip().split())
+
+    print(action_list)
+
+    # Work through the list:
+    while action_list:
+        handle_action(action_list[0])
+        del action_list[0]
+
+
+def handle_action(action, ahk):
+    """Does the given action"""
+    if action[0].lower() == "place":
+        place_monkey_tower()
 
 
 if __name__ == "__main__":

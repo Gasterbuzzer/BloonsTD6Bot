@@ -213,6 +213,7 @@ def select_level(level=0, difficulty=0, game_mode="standard"):
 
     time.sleep(6)
     click(click_locations["impoppable_accept"])
+    time.sleep(2)
 
 
 def go_select_level():

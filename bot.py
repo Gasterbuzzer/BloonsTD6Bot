@@ -299,6 +299,7 @@ def play_level(ahk, level=0, difficulty=0, game_mode="standard"):
 def check_if_won():
     """Returns true if won"""
     status = pyautogui.pixelMatchesColor(859, 154, (255, 239, 0))
+    print(status)
     return status
 
 
@@ -313,13 +314,15 @@ def handle_action(action, ahk):
         time.sleep(int(action[1]))
     elif action[0].lower() == "upgrade":
         upgrade_tower(ahk=ahk, coordinates={"x": int(action[1]), "y": int(action[2])}, upgrade_path=int(action[3]))
-    elif action[0].lower == "win":
+    elif action[0].lower() == "win":
         # We loop trying to see if we won, if yes, we return to the main menu.
         while not check_if_won():
             time.sleep(1)
         # Now we leave
         click(click_locations["win_screen_continue"])
         click(click_locations["win_screen_mainmenu"])
+    else:
+        print(f"ERROR: Unknown action {action}.\n")
 
 
 def upgrade_tower(ahk, coordinates=None, upgrade_path=0):
@@ -354,4 +357,4 @@ if __name__ == "__main__":
     time.sleep(5)
     small_beep()
 
-    #handle_action(["Start"], ahks)
+    handle_action(["Win"], ahks)

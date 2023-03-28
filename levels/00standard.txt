@@ -17,3 +17,14 @@ Wait 5
 Upgrade 429 705 1
 Wait 20
 Upgrade 702 333 0
+Wait 55
+Upgrade 429 705 1
+Wait 45
+Upgrade 702 333 0
+Wait 28
+Upgrade 429 705 0
+Wait 18
+Upgrade 702 333 2
+Wait 45
+Wait 5
+Win

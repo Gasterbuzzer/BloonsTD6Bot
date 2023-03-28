@@ -42,7 +42,8 @@ click_locations = {"settings_button_ingame": {"x": 1601, "y": 35}, "settings_hom
                    "magic_monkeys_only": {"x": 954, "y": 452}, "double_hp_moabs": {"x": 1269, "y": 458},
                    "half_cash": {"x": 1612, "y": 458}, "alternate_bloons_rounds": {"x": 951, "y": 741},
                    "impoppable": {"x": 1293, "y": 751}, "chimps": {"x": 1604, "y": 745},
-                   "delete_save": {"x": 1130, "y": 734}}
+                   "delete_save": {"x": 1130, "y": 734}, "win_screen_continue": {"x": 961, "y": 912},
+                   "win_screen_mainmenu": {"x": 728, "y": 851}}
 
 level_click_locations = {0: {"x": 516, "y": 251}, 1: {"x": 956, "y": 254}, 2: {"x": 1396, "y": 267},
                          3: {"x": 530, "y": 577}, 4: {"x": 962, "y": 563}, 5: {"x": 1387, "y": 562}}
@@ -295,6 +296,12 @@ def play_level(ahk, level=0, difficulty=0, game_mode="standard"):
         del action_list[0]
 
 
+def check_if_won():
+    """Returns true if won"""
+    status = pyautogui.pixelMatchesColor(859, 154, (255, 239, 0))
+    return status
+
+
 def handle_action(action, ahk):
     """Does the given action"""
     if action[0].lower() == "place":
@@ -306,6 +313,13 @@ def handle_action(action, ahk):
         time.sleep(int(action[1]))
     elif action[0].lower() == "upgrade":
         upgrade_tower(ahk=ahk, coordinates={"x": int(action[1]), "y": int(action[2])}, upgrade_path=int(action[3]))
+    elif action[0].lower == "win":
+        # We loop trying to see if we won, if yes, we return to the main menu.
+        while not check_if_won():
+            time.sleep(1)
+        # Now we leave
+        click(click_locations["win_screen_continue"])
+        click(click_locations["win_screen_mainmenu"])
 
 
 def upgrade_tower(ahk, coordinates=None, upgrade_path=0):

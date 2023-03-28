@@ -1,4 +1,3 @@
-import pyautogui
 from ahk import AHK
 import bot
 import time
@@ -7,7 +6,6 @@ import time
 # Interactive loop
 def main():
     """Main Function"""
-    screen_resolution = pyautogui.size()
 
     active = True
 
@@ -65,7 +63,7 @@ def handle_input(command):
         bot.small_beep()
 
         # Bot playing.
-        bot.play_level(ahk, 0, 0, "standard")
+        bot.play_level(ahk, level, difficulty, gamemode)
 
         return response
 
@@ -93,7 +91,7 @@ def handle_input(command):
 
         # Bot playing.
         for number in range(loop_amount):
-            bot.play_level(ahk, 0, 0, "standard")
+            bot.play_level(ahk, level, difficulty, gamemode)
             time.sleep(10)
 
         print(f"Loop: Finished looping {loop_amount} times.\n")

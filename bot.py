@@ -365,4 +365,3 @@ if __name__ == "__main__":
     small_beep()
 
     handle_action(["Win"], ahks)
-    

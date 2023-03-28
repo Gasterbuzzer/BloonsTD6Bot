@@ -1,7 +1,7 @@
 import pyautogui
 import time
 import winsound
-from ahk import AHK
+from ahk import AHK, keys
 
 monkey_towers_names_key = {"dart_monkey": "q", "boomerang_monkey": "w", "bomb_shooter": "e", "tack_shooter": "r",
                            "ice_monkey": "t", "glue_gunner": "y", "sniper_monkey": "z", "monkey_sub": "x",
@@ -198,7 +198,7 @@ def select_level(level=0, difficulty=0, game_mode="standard"):
     else:
         click(game_mode_check)
 
-    time.sleep(2)
+    time.sleep(6)
 
 
 def go_select_level():
@@ -284,7 +284,7 @@ def play_level(ahk, level=0, difficulty=0, game_mode="standard"):
             # We go through each line and add it to our list
             action_list.append(line.rstrip().split())
 
-    print(action_list)
+    # print(action_list)
 
     # Work through the list:
     while action_list:
@@ -296,6 +296,8 @@ def handle_action(action, ahk):
     """Does the given action"""
     if action[0].lower() == "place":
         place_monkey_tower(tower_number=action[3], coordinates={"x": int(action[1]), "y": int(action[2])}, ahk=ahk)
+    elif action[0].lower() == "start":
+        ahk.send_input(keys.KEYS.SPACE)
 
 
 if __name__ == "__main__":

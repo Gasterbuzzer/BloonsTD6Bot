@@ -302,16 +302,33 @@ def handle_action(action, ahk):
     elif action[0].lower() == "wait":
         time.sleep(int(action[1]))
     elif action[0].lower() == "upgrade":
-        upgrade_tower(ahk)
+        upgrade_tower(ahk=ahk, coordinates={"x": int(action[1]), "y": int(action[2])}, upgrade_path=int(action[3]))
 
 
-def upgrade_tower(ahk, coordinates=None):
+def upgrade_tower(ahk, coordinates=None, upgrade_path=0):
     """Upgrade Tower at given location."""
 
     if coordinates is None:
         coordinates = {"x": 0, "y": 0}
 
-    print("Upgrade")
+    upgrade = "None"
+    match upgrade_path:
+        case 0:
+            upgrade = "upgrade_path_1"
+        case 1:
+            upgrade = "upgrade_path_2"
+        case 2:
+            upgrade = "upgrade_path_3"
+        case _:
+            print("ERROR: Unknown upgrade path.\n")
+            return
+    key = monkey_tower_options[upgrade]
+
+    click(coordinates)
+
+    ahk.send_input(key)
+
+    ahk.key_press("escape")
 
 
 if __name__ == "__main__":

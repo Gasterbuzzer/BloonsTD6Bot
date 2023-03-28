@@ -4,3 +4,4 @@ Start
 Wait 25
 Place 429 705 13
 Wait 5
+Upgrade 702 333 0

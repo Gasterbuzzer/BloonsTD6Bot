@@ -65,7 +65,7 @@ def help_print():
     print("\nAll commands: ")
     print("\t\t'h' or 'help' : Shows all commands (currently)")
     print("\t\t'q' or 'quit' : Quit the program")
-    print("\t\t'level'       : Stars playing level 0.")
+    print("\t\t'level'       : Starts playing level 0.")
 
     print("\n")
 

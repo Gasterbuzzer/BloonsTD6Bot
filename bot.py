@@ -298,6 +298,7 @@ def handle_action(action, ahk):
         place_monkey_tower(tower_number=action[3], coordinates={"x": int(action[1]), "y": int(action[2])}, ahk=ahk)
     elif action[0].lower() == "start":
         ahk.key_press("space")
+        ahk.key_press("space")
 
 
 if __name__ == "__main__":

@@ -297,7 +297,7 @@ def handle_action(action, ahk):
     if action[0].lower() == "place":
         place_monkey_tower(tower_number=action[3], coordinates={"x": int(action[1]), "y": int(action[2])}, ahk=ahk)
     elif action[0].lower() == "start":
-        ahk.send_input(keys.KEYS.SPACE)
+        ahk.key_press("space")
 
 
 if __name__ == "__main__":
@@ -306,4 +306,4 @@ if __name__ == "__main__":
     time.sleep(5)
     small_beep()
 
-    handle_action(["Place", "702", "333", "15"], ahks)
+    handle_action(["Start"], ahks)

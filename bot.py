@@ -299,7 +299,6 @@ def play_level(ahk, level=0, difficulty=0, game_mode="standard"):
 def check_if_won():
     """Returns true if won"""
     status = pyautogui.pixelMatchesColor(859, 154, (255, 239, 0))
-    print(status)
     return status
 
 

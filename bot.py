@@ -43,7 +43,7 @@ click_locations = {"settings_button_ingame": {"x": 1601, "y": 35}, "settings_hom
                    "half_cash": {"x": 1612, "y": 458}, "alternate_bloons_rounds": {"x": 951, "y": 741},
                    "impoppable": {"x": 1293, "y": 751}, "chimps": {"x": 1604, "y": 745},
                    "delete_save": {"x": 1130, "y": 734}, "win_screen_continue": {"x": 961, "y": 912},
-                   "win_screen_mainmenu": {"x": 728, "y": 851}}
+                   "win_screen_mainmenu": {"x": 728, "y": 851}, "impoppable_accept": {"x": 962, "y": 760}}
 
 level_click_locations = {0: {"x": 516, "y": 251}, 1: {"x": 956, "y": 254}, 2: {"x": 1396, "y": 267},
                          3: {"x": 530, "y": 577}, 4: {"x": 962, "y": 563}, 5: {"x": 1387, "y": 562}}
@@ -208,6 +208,10 @@ def select_level(level=0, difficulty=0, game_mode="standard"):
         click(game_mode_check)
 
     click(click_locations["delete_save"])
+
+    # Special Menu Button
+    if difficulty == 2:
+        click(click_locations["impoppable_accept"])
 
     time.sleep(6)
 

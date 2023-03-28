@@ -1,6 +1,7 @@
 import pyautogui
 from ahk import AHK
 import bot
+import time
 
 
 # Interactive loop
@@ -45,8 +46,13 @@ def handle_input(command):
 
     elif command[:5] == "level":
         print("Starting bot...\n")
+
         ahk = AHK()
+        time.sleep(5)
+        bot.small_beep()
+
         bot.select_level(0, 0, "standard")
+
         return response
 
     else:

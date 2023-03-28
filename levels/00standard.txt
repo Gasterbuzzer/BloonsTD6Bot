@@ -1,4 +1,4 @@
-Level 0, Difficulty 1, Game Mode: Standard
+Level 0, Difficulty 0, Game Mode: Standard
 Place 702 333 15
 Start
 Wait 25

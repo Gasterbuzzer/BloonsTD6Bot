@@ -5,3 +5,8 @@ Wait 25
 Place 429 705 13
 Wait 5
 Upgrade 702 333 0
+Wait 30
+Upgrade 702 333 0
+Upgrade 702 333 2
+Wait 5
+Upgrade 429 705 0

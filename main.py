@@ -69,6 +69,35 @@ def handle_input(command):
 
         return response
 
+    elif command[:4] == "loop":
+        print("Starting looping bot...\n")
+
+        # Getting arguments
+        args = command.split()
+
+        if len(args) != 5:
+            print("ERROR: Incorrect format. See 'help' for usage.\n")
+            return response
+
+        level = int(args[1])
+        difficulty = int(args[2])
+        gamemode = args[3]
+        loop_amount = args[4]
+
+        ahk = AHK()
+
+        # Timer before bot start.
+        time.sleep(5)
+        bot.small_beep()
+
+        # Bot playing.
+        for number in range(loop_amount):
+            bot.play_level(ahk, 0, 0, "standard")
+
+        print(f"Loop: Finished looping {loop_amount} times.\n")
+
+        return response
+
     else:
         print(f"ERROR: Unknown command '{command}'.\n")
         return response
@@ -77,9 +106,12 @@ def handle_input(command):
 def help_print():
     """Prints all commands to console"""
     print("\nAll commands: ")
-    print("\t\t'h' or 'help'                                : Shows all commands (currently)")
-    print("\t\t'q' or 'quit'                                : Quit the program")
-    print("\t\t'level %level% %difficulty %gamemode%'       : Starts playing level 0. (Example: 'level 0 0 standard')")
+    print("\t\t'h' or 'help'                                             : Shows all commands (currently)")
+    print("\t\t'q' or 'quit'                                             : Quit the program")
+    print("\t\t'level %level% %difficulty %gamemode%'                    : Starts playing level. (Example: 'level 0 0 "
+          "standard')")
+    print("\t\t'level %level% %difficulty %gamemode% %loopamount%'       : Starts looping a level. (Example: 'level 0 "
+          "0 standard 10')")
 
     print("\n")
 

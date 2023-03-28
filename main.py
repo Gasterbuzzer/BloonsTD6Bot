@@ -82,7 +82,7 @@ def handle_input(command):
         level = int(args[1])
         difficulty = int(args[2])
         gamemode = args[3]
-        loop_amount = args[4]
+        loop_amount = int(args[4])
 
         ahk = AHK()
 

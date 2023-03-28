@@ -1,30 +1,29 @@
 Level 12, Difficulty 3, Game Mode: Impoppable
-Place 702 333 15
+Place 833 366 15
 Start
-Wait 25
-Place 429 705 13
-Wait 5
-Upgrade 702 333 0
-Wait 30
-Upgrade 702 333 0
-Wait 2
-Upgrade 702 333 2
-Wait 5
-Upgrade 429 705 0
-Wait 30
-Upgrade 429 705 1
-Wait 5
-Upgrade 429 705 1
+Wait 37
+Upgrade 833 366 0
+Wait 13
+Upgrade 833 366 2
+Wait 27
+Upgrade 833 366 0
+Wait 16
+Place 331 893 6
 Wait 20
-Upgrade 702 333 0
-Wait 55
-Upgrade 429 705 1
-Wait 45
-Upgrade 702 333 0
-Wait 28
-Upgrade 429 705 0
+Upgrade 331 893 0
+Wait 15
+Upgrade 331 893 2
+Wait 7
+Upgrade 331 893 2
 Wait 18
-Upgrade 702 333 2
-Wait 45
+Upgrade 833 366 0
+Wait 17
+Place 619 228 13
 Wait 5
-Win
+Upgrade 619 228 1
+Wait 11
+Upgrade 619 228 1
+Wait 6
+Upgrade 619 228 2
+Wait 3
+Upgrade 619 228 2

@@ -51,7 +51,7 @@ def handle_input(command):
         args = command.split()
 
         if len(args) != 4:
-            print("ERROR: Incorrect format. See 'help' for usage.")
+            print("ERROR: Incorrect format. See 'help' for usage.\n")
             return response
 
         level = int(args[1])

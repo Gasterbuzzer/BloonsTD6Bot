@@ -264,7 +264,21 @@ def reset_cursor():
 
 def play_level(level=0, difficulty=0, game_mode="standard"):
     """Plays a given level via already known info."""
-    select_level(level, difficulty, game_mode)
+    #select_level(level, difficulty, game_mode)
+
+    level_location = "levels/"
+    level_file_name = str(level) + str(difficulty) + game_mode + ".txt"
+    level_fnl = level_location + level_file_name
+
+    action_list = []
+
+    with open(level_fnl, "r") as f:
+        level_info = f.readline()  # Read the first line
+        print(f"Now playing: {level_info}")
+
+        while line := f.readline():
+            # We go through each line and add it to our list
+            action_list.append(line.rstrip())
 
 
 if __name__ == "__main__":

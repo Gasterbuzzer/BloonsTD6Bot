@@ -111,7 +111,7 @@ def help_print():
     print("\t\t'q' or 'quit'                                             : Quit the program")
     print("\t\t'level %level% %difficulty %gamemode%'                    : Starts playing level. (Example: 'level 0 0 "
           "standard')")
-    print("\t\t'level %level% %difficulty %gamemode% %loopamount%'       : Starts looping a level. (Example: 'level 0 "
+    print("\t\t'loop %level% %difficulty %gamemode% %loopamount%'       : Starts looping a level. (Example: 'level 0 "
           "0 standard 10')")
 
     print("\n")

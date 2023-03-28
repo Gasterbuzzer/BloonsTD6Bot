@@ -10,11 +10,11 @@ Upgrade 833 366 0
 Wait 18
 Place 340 850 6
 Wait 22
-Upgrade 331 893 0
+Upgrade 340 850 0
 Wait 17
-Upgrade 331 893 2
+Upgrade 340 850 2
 Wait 9
-Upgrade 331 893 2
+Upgrade 340 850 2
 Wait 20
 Upgrade 833 366 0
 Wait 19

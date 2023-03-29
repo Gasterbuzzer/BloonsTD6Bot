@@ -94,7 +94,7 @@ Upgrade 800 877 2
 Wait 3
 Upgrade 800 877 2
 Wait 10
-Place 371 521 6
+Place 371 521 5
 Wait 5
 Upgrade 371 521 2
 Wait 2
@@ -121,4 +121,6 @@ Wait 3
 Upgrade 599 658 1
 Wait 2
 Upgrade 599 658 1
-Wait 35
+Wait 45
+Upgrade 800 877 0
+Wait 20

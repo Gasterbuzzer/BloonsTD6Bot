@@ -1,6 +1,7 @@
 import pyautogui
 import time
 import winsound
+import imageRead
 from ahk import AHK
 
 monkey_towers_names_key = {"dart_monkey": "q", "boomerang_monkey": "w", "bomb_shooter": "e", "tack_shooter": "r",
@@ -368,4 +369,4 @@ if __name__ == "__main__":
     time.sleep(5)
     small_beep()
 
-    handle_action(["Win"], ahks)
+    print(imageRead.get_money())

@@ -142,11 +142,11 @@ Upgrade 290 635 2
 Wait 10
 Place 174 239 14
 Wait 2
-Uprade 174 239 0
+Upgrade 174 239 0
 Wait 6
-Uprade 174 239 1
+Upgrade 174 239 1
 Wait 4
-Uprade 174 239 1
+Upgrade 174 239 1
 Wait 40
-Uprade 174 239 0
+Upgrade 174 239 0
 Wait 10

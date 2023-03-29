@@ -121,4 +121,4 @@ Wait 3
 Upgrade 599 658 1
 Wait 2
 Upgrade 599 658 1
-Wait 20
+Wait 35

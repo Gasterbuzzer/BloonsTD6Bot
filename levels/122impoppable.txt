@@ -1,4 +1,4 @@
-Level 12, Difficulty 3, Game Mode: Impoppable
+Level 12, Difficulty 2, Game Mode: Impoppable
 Place 833 366 15
 Start
 Wait 37
@@ -56,17 +56,17 @@ Upgrade 600 433 1
 Wait 70
 Place 393 239 2
 Wait 3
-Upgrade 600 433 0
+Upgrade 393 239 0
 Wait 2
-Upgrade 600 433 0
+Upgrade 393 239 0
 Wait 2
-Upgrade 600 433 0
+Upgrade 393 239 0
 Wait 2
-Upgrade 600 433 0
+Upgrade 393 239 0
 Wait 2
-Upgrade 600 433 1
+Upgrade 393 239 1
 Wait 2
-Upgrade 600 433 1
+Upgrade 393 239 1
 Wait 15
 Place 1324 525 11
 Wait 2
@@ -79,6 +79,7 @@ Wait 2
 Upgrade 1324 525 1
 Wait 2
 Upgrade 1324 525 1
-Wait 35
+Wait 32
 Upgrade 1324 525 2
-Wait 3
+Wait 15
+Place 

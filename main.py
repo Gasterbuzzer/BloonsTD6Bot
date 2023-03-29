@@ -24,7 +24,6 @@ def main():
 
         # If the user wants to quit
         if not response:
-            active = False
             break
 
 

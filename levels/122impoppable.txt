@@ -82,4 +82,4 @@ Upgrade 1324 525 1
 Wait 32
 Upgrade 1324 525 2
 Wait 15
-Place 
+Place 800 877 10

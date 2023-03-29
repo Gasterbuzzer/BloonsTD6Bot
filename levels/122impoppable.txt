@@ -55,7 +55,7 @@ Wait 2
 Upgrade 600 433 1
 Wait 70
 Place 393 239 2
-Wait 2
+Wait 3
 Upgrade 600 433 0
 Wait 2
 Upgrade 600 433 0
@@ -81,4 +81,4 @@ Wait 2
 Upgrade 1324 525 1
 Wait 35
 Upgrade 1324 525 2
-Wait 2
+Wait 3

@@ -25,7 +25,60 @@ Wait 13
 Upgrade 619 228 1
 Wait 8
 Upgrade 619 228 2
-Wait 5
+Wait 8
 Upgrade 619 228 2
-Wait 15
+Wait 16
 Upgrade 360 850 0
+Wait 35
+Upgrade 619 228 1
+Wait 31
+Upgrade 360 850 0
+Wait 7
+Upgrade 833 366 2
+Wait 30
+Upgrade 360 850 0
+Wait 20
+Upgrade 833 366 0
+Wait 10
+Place 600 433 13
+Wait 5
+Upgrade 600 433 2
+Wait 5
+Upgrade 600 433 2
+Wait 6
+Upgrade 600 433 2
+Wait 15
+Upgrade 600 433 2
+Wait 5
+Upgrade 600 433 1
+Wait 2
+Upgrade 600 433 1
+Wait 70
+Place 393 239 2
+Wait 2
+Upgrade 600 433 0
+Wait 2
+Upgrade 600 433 0
+Wait 2
+Upgrade 600 433 0
+Wait 2
+Upgrade 600 433 0
+Wait 2
+Upgrade 600 433 1
+Wait 2
+Upgrade 600 433 1
+Wait 15
+Place 1324 525 11
+Wait 2
+Upgrade 1324 525 2
+Wait 2
+Upgrade 1324 525 2
+Wait 2
+Upgrade 1324 525 2
+Wait 2
+Upgrade 1324 525 1
+Wait 2
+Upgrade 1324 525 1
+Wait 35
+Upgrade 1324 525 2
+Wait 2

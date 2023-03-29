@@ -121,6 +121,32 @@ Wait 3
 Upgrade 599 658 1
 Wait 2
 Upgrade 599 658 1
-Wait 45
+Wait 135
 Upgrade 800 877 0
 Wait 20
+Place 290 635 6
+Wait 3
+Upgrade 290 635 2
+Wait 2
+Upgrade 290 635 2
+Wait 2
+Upgrade 290 635 2
+Wait 5
+Upgrade 290 635 2
+Wait 2
+Upgrade 290 635 0
+Wait 3
+Upgrade 290 635 0
+Wait 100
+Upgrade 290 635 2
+Wait 10
+Place 174 239 14
+Wait 2
+Uprade 174 239 0
+Wait 6
+Uprade 174 239 1
+Wait 4
+Uprade 174 239 1
+Wait 40
+Uprade 174 239 0
+Wait 10

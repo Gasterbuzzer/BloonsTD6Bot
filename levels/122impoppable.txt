@@ -121,7 +121,7 @@ Wait 3
 Upgrade 599 658 1
 Wait 2
 Upgrade 599 658 1
-Wait 135
+Wait 120
 Upgrade 800 877 0
 Wait 20
 Place 290 635 6

@@ -320,17 +320,22 @@ def check_if_won():
 def handle_action(action, ahk):
     """Does the given action"""
     if action[0].lower() == "place":
+        print(f"Placing tower {monkey_towers_names_id[action[3]]} on ({action[1]}, {action[2]}).\n")
         place_monkey_tower(tower_number=action[3], coordinates={"x": int(action[1]), "y": int(action[2])}, ahk=ahk)
     elif action[0].lower() == "start":
+        print("Starting game...\n")
         ahk.key_press("space")
         ahk.key_press("space")
     elif action[0].lower() == "wait":
         time.sleep(int(action[1]))
     elif action[0].lower() == "upgrade":
+        print(f"Upgrading tower path {action[3]} on ({action[1]}, {action[2]}).\n")
         upgrade_tower(ahk=ahk, coordinates={"x": int(action[1]), "y": int(action[2])}, upgrade_path=int(action[3]))
     elif action[0].lower() == "waitwave":
+        print(f"Waiting for wave {(action[2])} on level {action[1]}.\n")
         wait_for_wave(int(action[1]), int(action[2]))
     elif action[0].lower() == "win":
+        print(f"Waiting until having won...\n\n")
         # We loop trying to see if we won, if yes, we return to the main menu.
         while not check_if_won():
             time.sleep(1)

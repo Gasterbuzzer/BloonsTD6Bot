@@ -30,6 +30,7 @@ def get_wave(level, wave):
     found_thing = pyautogui.locate(mi, image, grayscale=True)
 
     if found_thing:
+        print(f"Found wave {wave} of level {level}.\n")
         return True
     else:
         return False

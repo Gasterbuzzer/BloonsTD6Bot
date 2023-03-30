@@ -1,5 +1,9 @@
 Level 1, Difficulty 2, Game Mode: Standard
 Place 485 334 15
 Start
-WaitWave 1 4
+WaitWave 1 5
+Upgrade 485 334 0
+WaitWave 1 11
+Upgrade 485 334 0
+Wait 1
 Upgrade 485 334 0

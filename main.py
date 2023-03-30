@@ -85,8 +85,7 @@ def handle_input(command):
 
         print(f"Starting to loop {loop_amount} times. Starting in 5 seconds...\n")
         # Timer before bot start.
-        time.sleep(5)
-        bot.small_beep()
+        bot.timer(5)
 
         # Bot playing.
         for number in range(loop_amount):

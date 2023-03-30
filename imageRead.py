@@ -1,46 +1,17 @@
-import pytesseract
-import numpy
-
-import cv2
-from PIL import ImageGrab
-
-
-def imToString():
-    # Path of tesseract executable
-    pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
-    while (True):
-        # ImageGrab-To capture the screen image in a loop.
-        # Bbox used to capture a specific area.
-        cap = ImageGrab.grab(bbox=(365, 17, 557, 61))
-
-        # Converted the image to monochrome for it to be easily
-        # read by the OCR and obtained the output String.
-        tesstr = pytesseract.image_to_string(
-            cv2.cvtColor(numpy.array(cap), cv2.COLOR_BGR2HSV),
-            lang='eng')
-        print(tesstr)
+import pyautogui
+import bot
 
 
 def get_money():
-    pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
+    image = pyautogui.screenshot("image_test.png", region=(200, 0, 600, 100))
 
-    cap = ImageGrab.grab(bbox=(365, 17, 557, 61))
-    text = ""
+    found_thing = pyautogui.locate("images/numbers/0.png", image, grayscale=True)
 
-    while text == "":
-        text = pytesseract.image_to_string(
-            cv2.cvtColor(numpy.array(cap), cv2.COLOR_BGR2HSV),
-            lang='eng')
-
-    text = text.replace(')', '')
-
-    text = int(text)
-
-    return text
+    return found_thing
 
 
 if __name__ == "__main__":
-    strs = "205)"
-    strs = strs.replace(')', '')
 
-    print(int(strs))
+    bot.timer(5)
+
+    print(get_money())

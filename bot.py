@@ -363,10 +363,14 @@ def upgrade_tower(ahk, coordinates=None, upgrade_path=0):
     ahk.key_press("escape")
 
 
+def timer(seconds=5):
+    time.sleep(seconds)
+    small_beep()
+
+
 if __name__ == "__main__":
     ahks = AHK()
 
-    time.sleep(5)
-    small_beep()
+    timer()
 
     print(imageRead.get_money())

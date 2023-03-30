@@ -48,7 +48,4 @@ Upgrade 799 251 0
 WaitWave 1 56
 Upgrade 799 251 2
 Wait 1
-WaitWave 1 77
-Upgrade 485 334 0
-Wait 1
 Win

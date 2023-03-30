@@ -325,6 +325,8 @@ def handle_action(action, ahk):
         time.sleep(int(action[1]))
     elif action[0].lower() == "upgrade":
         upgrade_tower(ahk=ahk, coordinates={"x": int(action[1]), "y": int(action[2])}, upgrade_path=int(action[3]))
+    elif action[0].lower() == "waitwave":
+        wait_for_wave(int(action[1]), int(action[2]))
     elif action[0].lower() == "win":
         # We loop trying to see if we won, if yes, we return to the main menu.
         while not check_if_won():
@@ -368,9 +370,16 @@ def timer(seconds=5):
     small_beep()
 
 
+def wait_for_wave(level, wave):
+    """Waits for a wave given by wait and wave."""
+    while True:
+        time.sleep(1)
+        result = imageRead.get_wave(level, wave)
+        if result:
+            break
+
+
 if __name__ == "__main__":
     ahks = AHK()
 
     timer()
-
-    print(imageRead.get_money())

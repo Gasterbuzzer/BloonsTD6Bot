@@ -143,6 +143,9 @@ def check_level(level):
         case 0:
             result = pyautogui.pixelMatchesColor(650, 253, (134, 196, 38))
             return result
+        case 1:
+            result = pyautogui.pixelMatchesColor(949, 217, (251, 182, 115))
+            return result
         case 12:
             result = pyautogui.pixelMatchesColor(1340, 558, (255, 255, 255))
             return result

@@ -22,17 +22,34 @@ def high_performance_time_function(function, tries):
 
 def get_wave(level, wave):
     # Has a timing of 0.0309 or 0.031 seconds. Worst 0.035
+
+    mi = match_image(level, wave)
+
     image = pyautogui.screenshot("image_test.png", region=(900, 0, 1000, 100))
 
-    found_thing = pyautogui.locate("images/00/3.png", image, grayscale=True)
+    found_thing = pyautogui.locate(mi, image, grayscale=True)
 
-    return found_thing
+    if found_thing:
+        return True
+    else:
+        return False
+
+
+def match_image(level, wave):
+
+    # Example: "images/level/0/3.png"
+
+    folder_images = "images/level/"
+    level = f"{level}/"
+    wave = f"{wave}.png"
+
+    return folder_images + level + wave
 
 
 if __name__ == "__main__":
 
     bot.timer(2)
 
-    high_performance_time_function(get_wave, 10)
+    print(match_image(12, 3))
 
     bot.small_beep()

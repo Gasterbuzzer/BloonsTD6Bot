@@ -21,6 +21,7 @@ WaitWave 1 30
 Upgrade 485 334 0
 Wait 1
 Upgrade 400 470 2
+Wait 30
 WaitWave 1 40
 Upgrade 400 470 0
 Wait 1
@@ -31,6 +32,7 @@ Wait 1
 Upgrade 784 378 2
 Upgrade 784 378 2
 Upgrade 784 378 2
+Wait 30
 WaitWave 1 50
 Upgrade 784 378 2
 Upgrade 784 378 1

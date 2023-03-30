@@ -1,5 +1,6 @@
 import pyautogui
 import bot
+import numpy
 
 
 def get_money():
@@ -15,3 +16,5 @@ if __name__ == "__main__":
     bot.timer(5)
 
     print(get_money())
+
+    bot.small_beep()

@@ -7,3 +7,46 @@ WaitWave 1 11
 Upgrade 485 334 0
 Wait 1
 Upgrade 485 334 0
+WaitWave 1 20
+Upgrade 485 334 2
+Wait 1
+Upgrade 485 334 2
+Wait 1
+Place 400 470 16
+Wait 1
+Upgrade 400 470 0
+Wait 1
+Upgrade 400 470 0
+WaitWave 1 30
+Upgrade 485 334 0
+Wait 1
+Upgrade 400 470 2
+WaitWave 1 40
+Upgrade 400 470 0
+Wait 1
+Upgrade 400 470 0
+Wait 1
+Place 784 378 6
+Wait 1
+Upgrade 784 378 2
+Upgrade 784 378 2
+Upgrade 784 378 2
+WaitWave 1 50
+Upgrade 784 378 2
+Upgrade 784 378 1
+Upgrade 784 378 1
+WaitWave 1 51
+Upgrade 784 378 2
+WaitWave 1 55
+Place 799 251 16
+Upgrade 799 251 0
+Upgrade 799 251 0
+Upgrade 799 251 0
+Upgrade 799 251 0
+WaitWave 1 56
+Upgrade 799 251 2
+Wait 1
+WaitWave 1 77
+Upgrade 485 334 0
+Wait 1
+Win
